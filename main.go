@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/moonssa/learngo/banking"
+	"github.com/moonssa/learngo/accounts"
 )
 
 
 
 
 func main() {
-	account := banking.Account{Owner:"moon", Balance:1000}
+	account := accounts.NewAccount("moon")
+	
 	fmt.Println(account)
 }
