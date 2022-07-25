@@ -40,9 +40,32 @@ func superAdd(numbers ...int) int {
 	}
 	return total
 }
+func canIDrink(age int) bool {
+	if koreanAge := age+2; koreanAge < 18 {
+		return false
+	} 
+	return true
+	
+}
+
+func canIDrinkTest(age int) bool {
+	switch koreanAge := age+2 ; koreanAge {
+	case 10:
+		return false
+	case 18:
+		return true
+	}
+	return false
+}
 func main(){
-	result := superAdd(1,3,5,7,9,11)
-	fmt.Println(result)
+	fmt.Println(canIDrinkTest(8))
+	fmt.Println(canIDrinkTest(16))
+
+	// fmt.Println(canIDrink(15))
+	// fmt.Println(canIDrink(16))
+
+	// result := superAdd(1,3,5,7,9,11)
+	// fmt.Println(result)
 	// totalLen, Upp := lenAndUpper("moon")
 	// fmt.Println(totalLen, Upp)
 	// tLen , _ := lenAndUpper("moon") // return 값 생략 가능 _ 이용
